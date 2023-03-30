@@ -22,5 +22,6 @@ module.exports = {
     'quotes': ["error", "single"],
     'no-trailing-spaces': "error",
     'no-multiple-empty-lines': "error",
+    'indent': ["error", 2]
   },
 };

@@ -7,16 +7,16 @@
 ## Requisitos:
 
 [  ]
-Cadastro de funcionários: A API deve permitir que os funcionários possam se cadastrar, fornecendo nome, email, senha, telefone, data de nascimento.
+Cadastro de funcionários: A API deve permitir que os funcionários possam se cadastrar, fornecendo nome, email, senha.
 
 [  ]
-Busca de funcionários: A API deve permitir que APENAS FUNCIONARIOS AUTORIZADOS possam buscar informações sobre outros funcionários cadastrados no sistema. Isso pode incluir buscar por nome, email, ou outras informações de perfil.
+Busca de funcionários: A API deve permitir que possam buscar informações sobre outros funcionários cadastrados no sistema. Isso pode incluir buscar por nome, email, ou outras informações de perfil.
 
 [  ]
-Edição de funcionários: A API deve permitir que APENAS FUNCIONARIOS AUTORIZADOS possam editar suas informações de perfil, como nome, email e senha.
+Edição de funcionários: A API deve permitir que possam editar suas informações de perfil, como nome, email e senha.
 
 [  ]
-Exclusão de funcionários: A API deve permitir que APENAS FUNCIONARIOS AUTORIZADOS possam excluir suas contas do sistema.
+Exclusão de funcionários: A API deve permitir que possam excluir suas contas do sistema.
 
 [  ]
 Autenticação: A API deve permitir que os funcionários possam se autenticar para ter acesso aos recursos protegidos. (JWT).
