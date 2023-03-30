@@ -9,4 +9,10 @@ import { GetAllEmployees } from './GetAllEmployees/getAllEmployees.service'
   providers: [PrismaService, CreateEmployeeService, GetAllEmployees]
 })
 
-export class EmployeeModule {}
+export class EmployeeModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(EmployeeExistsMiddleware)
+      .forRoutes('employee/:id')
+  }
+}
