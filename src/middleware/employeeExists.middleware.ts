@@ -4,11 +4,9 @@ import { PrismaService } from 'src/database/prisma.service'
 
 @Injectable()
 export class EmployeeExistsMiddleware implements NestMiddleware {
-  constructor(private prisma: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
   async use(req: Request, res: Response, next: NextFunction) {
-    console.log(req.params)
-
     const employeeId = req.params.id
     const employee = await this.prisma.employee.findUnique({
       where: {

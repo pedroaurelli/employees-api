@@ -1,22 +1,14 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common'
 import { EmployeeController } from './employee.controller'
 import { PrismaService } from 'src/database/prisma.service'
-import { CreateEmployeeService } from './CreateEmployee/createEmployee.service'
-import { GetAllEmployees } from './GetAllEmployees/getAllEmployees.service'
-import { DeleteEmployeeById } from './DeleteEmployeeById/deleteEmployeeById.service'
-import { UpdateEmployeeById } from './UpdateEmployeeById/updateEmployeeById.service'
 import { EmployeeExistsMiddleware } from 'src/middleware/employeeExists.middleware'
-import { GetEmployeeById } from './GetEmployeeById/getEmployeeById.service'
+import { EmployeeService } from './employee.service'
 
 @Module({
   controllers: [EmployeeController],
   providers: [
     PrismaService,
-    CreateEmployeeService,
-    GetAllEmployees,
-    DeleteEmployeeById,
-    UpdateEmployeeById,
-    GetEmployeeById
+    EmployeeService
   ]
 })
 

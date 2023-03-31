@@ -22,6 +22,8 @@ module.exports = {
     'quotes': ["error", "single"],
     'no-trailing-spaces': "error",
     'no-multiple-empty-lines': "error",
-    'indent': ["error", 2]
+    'indent': ["error", 2],
+    'no-use-before-define': "off",
+    '@typescript-eslint/no-use-before-define': ['off']
   },
 };

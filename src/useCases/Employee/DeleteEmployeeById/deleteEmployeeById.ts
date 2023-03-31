@@ -1,0 +1,9 @@
+import { PrismaService } from 'src/database/prisma.service'
+
+export async function deleteEmployeeById (prisma: PrismaService, id: string) {
+  await prisma.employee.delete({
+    where: {
+      id
+    }
+  })
+}
