@@ -17,7 +17,7 @@ export class Employee {
     manager?: boolean
 }
 
-export class CreateEmployeeParams extends Employee {
+export class UpsertEmployeeParams extends Employee {
   @IsNotEmpty()
   @IsString()
     password: string

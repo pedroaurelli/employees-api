@@ -1,4 +1,4 @@
-import { CreateEmployeeParams } from 'src/model/Employee'
+import { UpsertEmployeeParams } from 'src/model/Employee'
 import { PrismaService } from 'src/database/prisma.service'
 import { v4 as uuidV4 } from 'uuid'
 import { Injectable } from '@nestjs/common'
@@ -7,7 +7,7 @@ import { Injectable } from '@nestjs/common'
 export class CreateEmployeeService {
   constructor(private prisma: PrismaService) {}
 
-  async execute(params: CreateEmployeeParams): Promise<void> {
+  async execute(params: UpsertEmployeeParams): Promise<void> {
     const { name, email, password, manager, departament } = params
 
     const id = uuidV4()
