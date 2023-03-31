@@ -2,6 +2,7 @@ import { UpsertEmployeeParams } from 'src/model/Employee'
 import { PrismaService } from 'src/database/prisma.service'
 import { v4 as uuidV4 } from 'uuid'
 import { Injectable } from '@nestjs/common'
+import generateHashWithSalt from 'src/common/generateHashWithSalt'
 
 @Injectable()
 export class CreateEmployeeService {
@@ -12,12 +13,14 @@ export class CreateEmployeeService {
 
     const id = uuidV4()
 
+    const hashedPassword = generateHashWithSalt(password)
+
     await this.prisma.employee.create({
       data: {
         id,
         name,
         email,
-        password,
+        password: hashedPassword,
         manager,
         departament,
         createdAt: new Date()

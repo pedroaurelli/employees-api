@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common'
 import { PrismaService } from 'src/database/prisma.service'
-import { Employee } from 'src/model/Employee'
 
 @Injectable()
 export class GetEmployeeById {
