@@ -1,14 +1,15 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, UseInterceptors } from '@nestjs/common'
-import { UpsertEmployeeParams, Employee } from 'src/model/Employee'
+import { EmployeeDTO } from 'src/model/EmployeeDTO'
 import { EmployeeExistsMiddleware } from 'src/middleware/employeeExists.middleware'
 import { EmployeeService } from './employee.service'
+import { UpsertEmployeeParamsDTO } from 'src/model/UpsertEmployeeParamsDTO'
 
 @Controller('employee')
 export class EmployeeController {
   constructor(private readonly employee: EmployeeService) {}
 
   @Post()
-  async create(@Body() body: UpsertEmployeeParams) {
+  async create(@Body() body: UpsertEmployeeParamsDTO) {
     return this.employee.create(body)
   }
 
@@ -25,7 +26,7 @@ export class EmployeeController {
 
   @Patch(':id')
   @UseInterceptors(EmployeeExistsMiddleware)
-  async updateById(@Param('id') id: string, @Body() body: Partial<Employee>) {
+  async updateById(@Param('id') id: string, @Body() body: Partial<EmployeeDTO>) {
     return this.employee.updateById(id, body)
   }
 

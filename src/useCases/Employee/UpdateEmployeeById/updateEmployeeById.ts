@@ -4,7 +4,7 @@ export async function updateEmployeeById (
   prisma: PrismaClient,
   id: string,
   employee: Partial<Employee>
-) {
+): Promise<void> {
 
   await prisma.employee.update({
     where: {

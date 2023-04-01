@@ -1,6 +1,9 @@
 import { PrismaService } from 'src/database/prisma.service'
+import { EmployeeResultDTO } from 'src/model/EmployeeResultDTO'
 
-export async function getAllEmployees (prisma: PrismaService) {
+export async function getAllEmployees (
+  prisma: PrismaService
+): Promise<EmployeeResultDTO[]> {
   const employees = await prisma.employee.findMany({
     select: {
       id: true,
@@ -12,6 +15,6 @@ export async function getAllEmployees (prisma: PrismaService) {
     }
   })
 
-  return employees
+  return employees as EmployeeResultDTO[]
 }
 
