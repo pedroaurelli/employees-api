@@ -1,4 +1,5 @@
-import { PrismaService } from 'src/database/prisma.service'
+import { PrismaService } from '../../../database/prisma.service'
+
 
 export async function deleteEmployeeById (
   prisma: PrismaService,

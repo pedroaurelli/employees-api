@@ -1,5 +1,5 @@
-import { PrismaService } from 'src/database/prisma.service'
-import { EmployeeResultDTO } from 'src/model/EmployeeResultDTO'
+import { PrismaService } from '../../../database/prisma.service'
+import { EmployeeResultDTO } from '../../../dtos/EmployeeResultDTO'
 
 export async function getAllEmployees (
   prisma: PrismaService

@@ -1,9 +1,8 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, UseGuards, UseInterceptors } from '@nestjs/common'
-import { EmployeeDTO } from 'src/model/EmployeeDTO'
+import { EmployeeDTO } from 'src/dtos/EmployeeDTO'
 import { EmployeeExistsMiddleware } from 'src/middleware/employeeExists.middleware'
 import { EmployeeService } from './employee.service'
-import { UpsertEmployeeParamsDTO } from 'src/model/UpsertEmployeeParamsDTO'
-import { AuthGuard } from '../Auth/auth.guard'
+import { UpsertEmployeeParamsDTO } from 'src/dtos/UpsertEmployeeParamsDTO'
 import { Public } from '../../common/decorators/SetMetadata'
 
 @Controller('employee')

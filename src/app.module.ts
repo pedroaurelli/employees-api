@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common'
-import { EmployeeModule } from './useCases/Employee/employee.module'
-import { AuthModule } from './useCases/Auth/auth.module'
+import { AuthModule } from './modules/Auth/auth.module'
 import { ConfigModule } from '@nestjs/config'
 import { APP_GUARD } from '@nestjs/core'
-import { AuthGuard } from './useCases/Auth/auth.guard'
+import { AuthGuard } from './modules/Auth/auth.guard'
+import { EmployeeModule } from './modules/Employee/employee.module'
 
 @Module({
   imports: [

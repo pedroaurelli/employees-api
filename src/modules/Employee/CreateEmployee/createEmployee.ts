@@ -1,6 +1,6 @@
 import { v4 as uuidV4 } from 'uuid'
 import { PrismaClient } from '@prisma/client'
-import { UpsertEmployeeParamsDTO } from 'src/model/UpsertEmployeeParamsDTO'
+import { UpsertEmployeeParamsDTO } from 'src/dtos/UpsertEmployeeParamsDTO'
 import generateHashWithSalt from '../../../common/generateHashWithSalt'
 
 export async function createEmployee (

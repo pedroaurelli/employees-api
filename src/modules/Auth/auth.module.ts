@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common'
 import { AuthService } from './auth.service'
-import { EmployeeModule } from '../Employee/employee.module'
 import { AuthController } from './auth.controller'
 import { JwtModule } from '@nestjs/jwt'
 import { PrismaService } from '../../database/prisma.service'
-import { APP_GUARD } from '@nestjs/core'
-import { AuthGuard } from './auth.guard'
+import { EmployeeModule } from '../Employee/employee.module'
 
 @Module({
   imports: [

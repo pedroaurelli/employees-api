@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common'
-import { EmployeeDTO } from 'src/model/EmployeeDTO'
-import { createEmployee } from './CreateEmployee/createEmployee'
+import { EmployeeDTO } from 'src/dtos/EmployeeDTO'
 import { PrismaService } from 'src/database/prisma.service'
+import { UpsertEmployeeParamsDTO } from 'src/dtos/UpsertEmployeeParamsDTO'
+import { createEmployee } from './CreateEmployee/createEmployee'
+import { deleteEmployeeById } from './DeleteEmployeeById/deleteEmployeeById'
+import { getAllEmployees } from './GetAllEmployees/getAllEmployees'
 import { getEmployeeById } from './GetEmployeeById/getEmployeeById'
 import { updateEmployeeById } from './UpdateEmployeeById/updateEmployeeById'
-import { getAllEmployees } from './GetAllEmployees/getAllEmployees'
-import { deleteEmployeeById } from './DeleteEmployeeById/deleteEmployeeById'
-import { UpsertEmployeeParamsDTO } from 'src/model/UpsertEmployeeParamsDTO'
 
 @Injectable()
 export class EmployeeService {

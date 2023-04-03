@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client'
-import { EmployeeDTO } from 'src/model/EmployeeDTO'
+import { EmployeeDTO } from '../../../dtos/EmployeeDTO'
 
 export async function getEmployeeById (
   prisma: PrismaClient,

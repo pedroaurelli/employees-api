@@ -1,7 +1,7 @@
 import { mock } from 'jest-mock-extended'
 import { PrismaService } from '../../../database/prisma.service'
 import { createEmployee } from './createEmployee'
-import { UpsertEmployeeParamsDTO } from '../../../model/UpsertEmployeeParamsDTO'
+import { UpsertEmployeeParamsDTO } from '../../../dtos/UpsertEmployeeParamsDTO'
 
 describe('createEmployee', () => {
   test('creates new employee', async () => {
