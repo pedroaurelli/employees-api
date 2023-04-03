@@ -16,6 +16,6 @@ export class EmployeeModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(EmployeeExistsMiddleware)
-      .forRoutes('employee/:id')
+      .forRoutes('employee/:id', 'employee')
   }
 }

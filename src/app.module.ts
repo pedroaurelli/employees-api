@@ -8,7 +8,7 @@ import { EmployeeModule } from './modules/Employee/employee.module'
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: ['.env.dev', '.env']
+      isGlobal: true
     }),
     EmployeeModule,
     AuthModule
