@@ -11,6 +11,7 @@ export class EmployeeController {
 
   @Public()
   @Post()
+  @UseInterceptors(EmployeeExistsMiddleware)
   async create(@Body() body: UpsertEmployeeParamsDTO) {
     return this.employee.create(body)
   }
