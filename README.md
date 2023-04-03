@@ -26,14 +26,14 @@ Edição de funcionários: A API deve permitir que possam editar suas informaç�
 [X]
 Exclusão de funcionários: A API deve permitir que possam excluir suas contas do sistema.
 
-[  ]
+[X]
 Autenticação: A API deve permitir que os funcionários possam se autenticar para ter acesso aos recursos protegidos. (JWT).
 
 [  ]
 Recuperação de senha: A API deve permitir que os funcionários possam recuperar suas senhas caso tenham esquecido. Isso pode ser feito enviando um link de redefinição de senha para o email do usuário.
 
 [  ]
-Segurança: A API deve ser protegida contra ataques, como ataques de injeção de SQL ou XSS. Para isso, você pode usar bibliotecas como o Helmet e o Express Validator.
+Segurança: A API deve ser protegida contra ataques, como ataques de injeção de SQL ou XSS. Para isso. (Helmet).
 
 [  ]
-Documentação: A API deve ser documentada para permitir que outros desenvolvedores possam integrá-la facilmente em seus projetos. Você pode usar ferramentas como o Swagger ou o Postman para documentar a API.
+Documentação: A API deve ser documentada para permitir que outros desenvolvedores possam integrá-la facilmente em seus projetos. Ferramentas como o Swagger ou o Postman para documentar a API.
