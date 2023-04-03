@@ -13,13 +13,8 @@ export class EmployeeExistsMiddleware implements NestMiddleware {
 
     const where: Prisma.EmployeeWhereInput = {}
 
-    console.log(Boolean(employeeId))
-    console.log(employeeEmail)
-
     if(employeeId) where.id = employeeId
     if(employeeEmail && !employeeId) where.email = employeeEmail
-
-    console.log(where)
 
     const employee = await this.prisma.employee.findFirst({
       where
