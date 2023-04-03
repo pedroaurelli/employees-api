@@ -1,13 +1,16 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post, UseInterceptors } from '@nestjs/common'
+import { Body, Controller, Delete, Get, Param, Patch, Post, UseGuards, UseInterceptors } from '@nestjs/common'
 import { EmployeeDTO } from 'src/model/EmployeeDTO'
 import { EmployeeExistsMiddleware } from 'src/middleware/employeeExists.middleware'
 import { EmployeeService } from './employee.service'
 import { UpsertEmployeeParamsDTO } from 'src/model/UpsertEmployeeParamsDTO'
+import { AuthGuard } from '../Auth/auth.guard'
+import { Public } from '../../common/decorators/SetMetadata'
 
 @Controller('employee')
 export class EmployeeController {
   constructor(private readonly employee: EmployeeService) {}
 
+  @Public()
   @Post()
   async create(@Body() body: UpsertEmployeeParamsDTO) {
     return this.employee.create(body)

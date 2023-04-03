@@ -1,4 +1,3 @@
-import { Employee } from '@prisma/client'
 import { mock } from 'jest-mock-extended'
 import { PrismaService } from '../../../database/prisma.service'
 import { createEmployee } from './createEmployee'
