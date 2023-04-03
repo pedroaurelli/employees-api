@@ -8,7 +8,6 @@ Package | Descrição
 [TypeScript](https://www.typescriptlang.org/) | Superset JavaScript
 [Prisma](https://www.prisma.io/) | ORM
 [Jest](https://jestjs.io/pt-BR/) | Framework para testes em JavaScript
-[Class validator](https://www.npmjs.com/package/class-validator) | Validação das propriedades com decorators
 [UUID](https://www.npmjs.com/package/uuid) | Gerar identificadores únicos
 
 
