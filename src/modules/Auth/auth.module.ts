@@ -11,7 +11,7 @@ import { EmployeeModule } from '../Employee/employee.module'
     JwtModule.register({
       global: true,
       secret: process.env.JWT_SECRET,
-      signOptions: { expiresIn: '60s' }
+      signOptions: { expiresIn: '30d' }
     })
   ],
   providers: [
