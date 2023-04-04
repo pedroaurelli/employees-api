@@ -9,6 +9,7 @@ Package | Descrição
 [Prisma](https://www.prisma.io/) | ORM
 [Jest](https://jestjs.io/pt-BR/) | Framework para testes em JavaScript
 [UUID](https://www.npmjs.com/package/uuid) | Gerar identificadores únicos
+[Supabase](https://supabase.com/) | Storage de dados, alternativa para o Firebase
 
 
 ## Requisitos:
