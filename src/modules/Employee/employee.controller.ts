@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post, UseGuards, UseInterc
 import { EmployeeDTO } from 'src/dtos/EmployeeDTO'
 import { EmployeeExistsMiddleware } from 'src/middleware/employeeExists.middleware'
 import { EmployeeService } from './employee.service'
-import { UpsertEmployeeParamsDTO } from 'src/dtos/UpsertEmployeeParamsDTO'
+import { CreateEmployeeParamsDTO } from 'src/dtos/CreateEmployeeDTO'
 import { Public } from '../../common/decorators/SetMetadata'
 
 @Controller('employee')
@@ -12,7 +12,7 @@ export class EmployeeController {
   @Public()
   @Post()
   @UseInterceptors(EmployeeExistsMiddleware)
-  async create(@Body() body: UpsertEmployeeParamsDTO) {
+  async create(@Body() body: CreateEmployeeParamsDTO) {
     return this.employee.create(body)
   }
 

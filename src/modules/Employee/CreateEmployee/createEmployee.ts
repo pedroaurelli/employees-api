@@ -1,11 +1,11 @@
 import { v4 as uuidV4 } from 'uuid'
 import { PrismaClient } from '@prisma/client'
-import { UpsertEmployeeParamsDTO } from 'src/dtos/UpsertEmployeeParamsDTO'
+import { CreateEmployeeParamsDTO } from 'src/dtos/CreateEmployeeDTO'
 import generateHashWithSalt from '../../../common/generateHashWithSalt'
 
 export async function createEmployee (
   prisma: PrismaClient,
-  params: UpsertEmployeeParamsDTO
+  params: CreateEmployeeParamsDTO
 ): Promise<void> {
 
   const { name, email, password, manager, departament } = params

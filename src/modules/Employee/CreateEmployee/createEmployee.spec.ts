@@ -1,7 +1,7 @@
 import { mock } from 'jest-mock-extended'
 import { PrismaService } from '../../../database/prisma.service'
 import { createEmployee } from './createEmployee'
-import { UpsertEmployeeParamsDTO } from '../../../dtos/UpsertEmployeeParamsDTO'
+import { CreateEmployeeParamsDTO } from '../../../dtos/CreateEmployeeDTO'
 
 describe('createEmployee', () => {
   test('creates new employee', async () => {
@@ -10,7 +10,7 @@ describe('createEmployee', () => {
         create: jest.fn()
       }
     })
-    const employee: UpsertEmployeeParamsDTO = {
+    const employee: CreateEmployeeParamsDTO = {
       name: 'john doe',
       email: 'john.doe@email.test',
       manager: null,

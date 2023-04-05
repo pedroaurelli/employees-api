@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import { EmployeeDTO } from 'src/dtos/EmployeeDTO'
 import { PrismaService } from 'src/database/prisma.service'
-import { UpsertEmployeeParamsDTO } from 'src/dtos/UpsertEmployeeParamsDTO'
+import { CreateEmployeeParamsDTO } from 'src/dtos/CreateEmployeeDTO'
 import { createEmployee } from './CreateEmployee/createEmployee'
 import { deleteEmployeeById } from './DeleteEmployeeById/deleteEmployeeById'
 import { getAllEmployees } from './GetAllEmployees/getAllEmployees'
@@ -12,7 +12,7 @@ import { updateEmployeeById } from './UpdateEmployeeById/updateEmployeeById'
 export class EmployeeService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async create(params: UpsertEmployeeParamsDTO) {
+  async create(params: CreateEmployeeParamsDTO) {
     return createEmployee(this.prisma, params)
   }
 
